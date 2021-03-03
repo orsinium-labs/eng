@@ -1,7 +1,3 @@
- litre 	 liter
- litres 	 liters
- metre	 meter
- metres	 meters
 accessorise	accessorize
 accessorised	accessorized
 accessorises	accessorizes
@@ -12,8 +8,6 @@ acclimatised	acclimatized
 acclimatises	acclimatizes
 acclimatising	acclimatizing
 accoutrements	accouterments
-adaptor	adapter
-adrenaline	adrenalin
 aeon	eon
 aeons	eons
 aerogramme	aerogram
@@ -114,7 +108,6 @@ authorise	authorize
 authorised	authorized
 authorises	authorizes
 authorising	authorizing
-axe	ax
 backpedalled	backpedaled
 backpedalling	backpedaling
 bannister	banister
@@ -134,7 +127,6 @@ baulking	balking
 baulks	balks
 bedevilled	bedeviled
 bedevilling	bedeviling
-beetroot	beet
 behaviour	behavior
 behavioural	behavioral
 behaviourism	behaviorism
@@ -153,39 +145,26 @@ bevelled	beveled
 bevvies	bevies
 bevvy	bevy
 bingeing	binging
-bobsleigh	bobsled
-bogey	boogey
 bougainvillaea	bougainvillea
 bougainvillaeas	bougainvilleas
 bowdlerise	bowdlerize
 bowdlerised	bowdlerized
 bowdlerises	bowdlerizes
 bowdlerising	bowdlerizing
-bracket	paren
-bracket	parenthesis
-bracketed	parenthesized
-brackets	parentheses
 breathalyse	breathalyze
 breathalysed	breathalyzed
 breathalyser	breathalyzer
 breathalysers	breathalyzers
 breathalyses	breathalyzes
 breathalysing	breathalyzing
-broke	braked
 brutalise	brutalize
 brutalised	brutalized
 brutalises	brutalizes
 brutalising	brutalizing
-bulldog clip	binder clip
-bum bag	fanny pack
-burnt	burned
 buses	busses
 busing	bussing
 caesarean	cesarean
 caesareans	cesareans
-caesium	cesium
-café	cafe
-café	coffee shop
 calibre	caliber
 calibres	calibers
 calliper	caliper
@@ -200,7 +179,6 @@ cancellations	cancelations
 cancelled	canceled
 cancelling	canceling
 candour	candor
-candy floss	cotton candy
 cannibalise	cannibalize
 cannibalised	cannibalized
 cannibalises	cannibalizes
@@ -223,12 +201,10 @@ carbonise	carbonize
 carbonised	carbonized
 carbonises	carbonizes
 carbonising	carbonizing
-carburettor	carburetor
 carolled	caroled
 carolling	caroling
 case-insensitive	case insensitive
 case-sensitive	case sensitive
-castor	caster
 catalogue	catalog
 catalogue 	catalog
 catalogue.	catalog.
@@ -392,7 +368,6 @@ customise	customize
 customised	customized
 customises	customizes
 customising	customizing
-cutlery	flatware
 cypher	cipher
 cyphers	ciphers
 dealt	dealed
@@ -492,7 +467,6 @@ discy	disky
 disembowelled	disemboweled
 disembowelling	disemboweling
 disfavour	disfavor
-dish cloth	dishrag
 dishevelled	disheveled
 dishonour	dishonor
 dishonourable	dishonorable
@@ -505,7 +479,6 @@ disorganised	disorganized
 distil	distill
 distils	distills
 doughnut	donut
-drainpipe	downspout
 dramatisation	dramatization
 dramatisations	dramatizations
 dramatise	dramatize
@@ -524,7 +497,6 @@ draughtsmen	draftsmen
 draughtswoman	draftswoman
 draughtswomen	draftswomen
 draughty	drafty
-drawing pin	thumbtack
 dreamt	dreamed
 drivelled	driveled
 drivelling	driveling
@@ -592,7 +564,6 @@ evangelise	evangelize
 evangelised	evangelized
 evangelises	evangelizes
 evangelising	evangelizing
-exhaust pipe	tailpipe
 exorcise	exorcize
 exorcised	exorcized
 exorcises	exorcizes
@@ -623,7 +594,6 @@ fantasise	fantasize
 fantasised	fantasized
 fantasises	fantasizes
 fantasising	fantasizing
-farmyard	barnyard
 favour	favor
 favourable	favorable
 favourably	favorably
@@ -654,7 +624,6 @@ fictionalise	fictionalize
 fictionalised	fictionalized
 fictionalises	fictionalizes
 fictionalising	fictionalizing
-fill in	fill out
 fillet	filet
 filleted	fileted
 filleting	fileting
@@ -725,7 +694,6 @@ gauge	gage
 gauged	gaged
 gauges	gages
 gauging	gaging
-gear stick	stickshift
 generalisation	generalization
 generalisations	generalizations
 generalise	generalize
@@ -764,7 +732,6 @@ greylisted	graylisted
 greylisting	graylisting
 greyness	grayness
 greys	grays
-grill	broil
 grovelled	groveled
 grovelling	groveling
 groyne	groin
@@ -820,7 +787,6 @@ hospitalise	hospitalize
 hospitalised	hospitalized
 hospitalises	hospitalizes
 hospitalising	hospitalizing
-hot chips	french fries
 humanise	humanize
 humanised	humanized
 humanises	humanizes
@@ -923,7 +889,6 @@ ioniser	ionizer
 ionisers	ionizers
 ionises	ionizes
 ionising	ionizing
-irritable	ornery
 italicise	italicize
 italicised	italicized
 italicises	italicizes
@@ -931,8 +896,6 @@ italicising	italicizing
 itemised	itemized
 itemises	itemizes
 itemising	itemizing
-jelly	jell-o
-jelly	jello
 jeopardise	jeopardize
 jeopardised	jeopardized
 jeopardises	jeopardizes
@@ -960,7 +923,6 @@ labouring	laboring
 labours	labors
 lacklustre	lackluster
 ladybird	ladybug
-leant	leaned
 learnt	learned
 legalisation	legalization
 legalise	legalize
@@ -972,7 +934,6 @@ legitimised	legitimized
 legitimises	legitimizes
 legitimising	legitimizing
 lept	leaped
-letterbox	mail slot
 letterbox	mailbox
 leukaemia	leukemia
 levelled	leveled
@@ -1003,9 +964,11 @@ liquidiser	liquidizer
 liquidisers	liquidizers
 liquidises	liquidizes
 liquidising	liquidizing
-liquorice	licorice
 lit	lighted
 litre	liter
+litre 	 liter
+litre 	 liter
+litres 	 liters
 localisation	localization
 localisational	localizational
 localise	localize
@@ -1071,6 +1034,8 @@ metabolise	metabolize
 metabolised	metabolized
 metabolises	metabolizes
 metabolising	metabolizing
+metre	 meter
+metres	 meters
 micrometre	micrometer
 micrometres	micrometers
 militarise	militarize
@@ -1151,10 +1116,6 @@ moustached	mustached
 moustaches	mustaches
 moustachioed	mustachioed
 multicoloured	multicolored
-mum	mom
-mum-and-dad	mom-and-pop
-mumma	momma
-mummy	mommy
 nanometre	nanometer
 nationalisation	nationalization
 nationalisations	nationalizations
@@ -1186,7 +1147,6 @@ normalise	normalize
 normalised	normalized
 normalises	normalizes
 normalising	normalizing
-normality	normalcy
 number plate	license plate
 odour	odor
 odourless	odorless
@@ -1195,10 +1155,8 @@ oenology	enology
 oesophagus	esophagus
 oesophaguses	esophaguses
 oestrogen	estrogen
-off	off of
 offence	offense
 offences	offenses
-often	oftentimes
 omelette	omelet
 omelettes	omelets
 optimisation	optimization
@@ -1223,12 +1181,10 @@ ostracise	ostracize
 ostracised	ostracized
 ostracises	ostracizes
 ostracising	ostracizing
-ousting	ouster
 outmanoeuvre	outmaneuver
 outmanoeuvred	outmaneuvered
 outmanoeuvres	outmaneuvers
 outmanoeuvring	outmaneuvering
-overalls	coveralls
 overemphasise	overemphasize
 overemphasised	overemphasized
 overemphasises	overemphasizes
@@ -1313,7 +1269,6 @@ philtre	filter
 philtres	filters
 phoney	phony
 picometre	picometer
-pin	prong
 plagiarise	plagiarize
 plagiarised	plagiarized
 plagiarises	plagiarizes
@@ -1350,7 +1305,6 @@ practises	practices
 practising	practicing
 praesidium	presidium
 praesidiums	presidiums
-pram	stroller
 première	premiere
 pressurisation	pressurization
 pressurise	pressurize
@@ -1431,7 +1385,6 @@ rationalises	rationalizes
 rationalising	rationalizing
 ravelled	raveled
 ravelling	raveling
-real estate agent	realator
 realisable	realizable
 realisation	realization
 realisations	realizations
@@ -1717,7 +1670,6 @@ tantalised	tantalized
 tantalises	tantalizes
 tantalising	tantalizing
 tantalisingly	tantalizingly
-tap	faucet
 tasselled	tasseled
 tea towel	dishtowel
 technicolour	technicolor
@@ -1734,7 +1686,6 @@ tenderise	tenderize
 tenderised	tenderized
 tenderises	tenderizes
 tenderising	tenderizing
-terraced house	row house
 terrorise	terrorize
 terrorised	terrorized
 terrorises	terrorizes
@@ -1792,7 +1743,6 @@ trivialise	trivialize
 trivialised	trivialized
 trivialises	trivializes
 trivialising	trivializing
-trolleybus	trackless trolley
 tumour	tumor
 tumours	tumors
 tunnelled	tunneled
