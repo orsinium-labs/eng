@@ -1,5 +1,5 @@
-import ast
 import enum
+import tokenize
 import typing
 from functools import lru_cache
 from pathlib import Path
@@ -32,13 +32,14 @@ def get_words(target: Target) -> typing.Mapping[str, str]:
 
 class Fixer:
     target: Target
-    tree: ast.Module
+    tokens: typing.Tuple[tokenize.TokenInfo, ...]
     content: str
 
     def __init__(self, *, target: Target = Target.US, content: str) -> None:
         self.target = target
         self.content = content
-        self.tree = ast.parse(content)
+        callback = iter(content.encode('utf8').splitlines()).__next__
+        self.tokens = tuple(tokenize.tokenize(callback))
 
     @classmethod
     def from_path(cls, path: Path, **kwargs) -> 'Fixer':
@@ -51,11 +52,11 @@ class Fixer:
 
     @property
     def replacements(self) -> typing.Iterator[Replacement]:
-        for node in ast.walk(self.tree):
-            handler = HANDLERS.get(type(node))
+        for token in self.tokens:
+            handler = HANDLERS.get(token.type)
             if handler is None:
                 continue
-            yield from handler(node, self.words)
+            yield from handler(token, self.words)
 
     def apply(self) -> str:
         reps = sorted(self.replacements, reverse=True)
