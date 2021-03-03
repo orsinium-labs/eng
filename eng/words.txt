@@ -527,8 +527,6 @@ drivelled	driveled
 drivelling	driveling
 duelled	dueled
 duelling	dueling
-dummy	pacifier
-ecognising	recognizing
 economised	economized
 economise	economize
 economises	economizes
@@ -1354,7 +1352,6 @@ practising	practicing
 praesidium	presidium
 praesidiums	presidiums
 pram	stroller
-prefix	prepend
 première	premiere
 pressurisation	pressurization
 pressurised	pressurized
@@ -1584,7 +1581,6 @@ signalising	signalizing
 signalled	signaled
 signalling	signaling
 simultaneous	simultanous
-skip	dumpster
 sleigh	sled
 smouldered	smoldered
 smouldering	smoldering
@@ -1669,7 +1665,6 @@ succoured	succored
 succouring	succoring
 succours	succors
 succour	succor
-suffix	postpend
 sulphates	sulfates
 sulphate	sulfate
 sulphides	sulfides

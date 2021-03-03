@@ -40,9 +40,9 @@ class Fixer:
 
     @property
     def tokens(self) -> typing.Tuple[tokenize.TokenInfo, ...]:
-        lines = self.content.encode('utf8').split(b'\n')
-        callback = (line + b'\n' for line in lines).__next__
-        return tuple(tokenize.tokenize(callback))
+        lines = self.content.split('\n')
+        callback = (line + '\n' for line in lines).__next__
+        return tuple(tokenize.generate_tokens(callback))
 
     @property
     def words(self) -> typing.Mapping[str, str]:

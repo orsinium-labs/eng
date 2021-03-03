@@ -18,6 +18,10 @@ from eng import Fixer
     ('"""centre"""', '"""center"""'),
     ("'''centre'''", "'''center'''"),
     ("'''\n this\n centre\n world\n'''", "'''\n this\n center\n world\n'''"),
+    ("'''\n this\n centre of the\n world\n'''", "'''\n this\n center of the\n world\n'''"),
+    ("'''\n this\n the centre\n world\n'''", "'''\n this\n the center\n world\n'''"),
+    ("'''\n this\n the centre of the\n world\n'''", "'''\n this\n the center of the\n world\n'''"),
+    ("'''\n this\n   the centre of the\n world\n'''", "'''\n this\n   the center of the\n world\n'''"),
 ])
 def test_fixer(given: str, expected: str):
     fixer = Fixer(content=given)
