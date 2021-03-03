@@ -17,6 +17,7 @@ from eng import Fixer
     # triple quotes
     ('"""centre"""', '"""center"""'),
     ("'''centre'''", "'''center'''"),
+    ("'''\n this\n centre\n world\n'''", "'''\n this\n center\n world\n'''"),
 ])
 def test_fixer(given: str, expected: str):
     fixer = Fixer(content=given)

@@ -32,14 +32,17 @@ def get_words(target: Target) -> typing.Mapping[str, str]:
 
 class Fixer:
     target: Target
-    tokens: typing.Tuple[tokenize.TokenInfo, ...]
     content: str
 
     def __init__(self, *, target: Target = Target.US, content: str) -> None:
         self.target = target
         self.content = content
-        callback = iter(content.encode('utf8').splitlines()).__next__
-        self.tokens = tuple(tokenize.tokenize(callback))
+
+    @property
+    def tokens(self) -> typing.Tuple[tokenize.TokenInfo, ...]:
+        lines = self.content.encode('utf8').split(b'\n')
+        callback = (line + b'\n' for line in lines).__next__
+        return tuple(tokenize.tokenize(callback))
 
     @classmethod
     def from_path(cls, path: Path, **kwargs) -> 'Fixer':
