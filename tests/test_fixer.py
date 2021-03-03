@@ -1,6 +1,6 @@
 import pytest
 
-from eng import Fixer
+from eng import PythonFixer
 
 
 @pytest.mark.parametrize('given, expected', [
@@ -24,6 +24,6 @@ from eng import Fixer
     ("'''\n this\n the centre of the\n world\n'''", "'''\n this\n the center of the\n world\n'''"),
     ("'''\n this\n   the centre of the\n world\n'''", "'''\n this\n   the center of the\n world\n'''"),
 ])
-def test_fixer(given: str, expected: str):
-    fixer = Fixer(content=given)
+def test_PythonFixer(given: str, expected: str):
+    fixer = PythonFixer(content=given)
     assert fixer.apply() == expected

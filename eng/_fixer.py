@@ -39,22 +39,12 @@ class Fixer:
         self.content = content
 
     @property
-    def tokens(self) -> typing.Tuple[tokenize.TokenInfo, ...]:
-        lines = self.content.split('\n')
-        callback = (line + '\n' for line in lines).__next__
-        return tuple(tokenize.generate_tokens(callback))
-
-    @property
     def words(self) -> typing.Mapping[str, str]:
         return get_words(target=self.target)
 
     @property
     def replacements(self) -> typing.Iterator[Replacement]:
-        for token in self.tokens:
-            handler = HANDLERS.get(token.type)
-            if handler is None:
-                continue
-            yield from handler(token, self.words)
+        raise NotImplementedError
 
     def apply(self) -> str:
         reps = sorted(self.replacements, reverse=True)
@@ -66,3 +56,33 @@ class Fixer:
             line = line_before + rep.word_to + line_after
             lines[rep.row] = line
         return '\n'.join(lines)
+
+
+class PythonFixer(Fixer):
+    @property
+    def tokens(self) -> typing.Tuple[tokenize.TokenInfo, ...]:
+        lines = self.content.split('\n')
+        callback = (line + '\n' for line in lines).__next__
+        return tuple(tokenize.generate_tokens(callback))
+
+    @property
+    def replacements(self) -> typing.Iterator[Replacement]:
+        for token in self.tokens:
+            handler = HANDLERS.get(token.type)
+            if handler is None:
+                continue
+            yield from handler(token, self.words)
+
+
+class TextFixer(Fixer):
+    @property
+    def replacements(self) -> typing.Iterator[Replacement]:
+        token = tokenize.TokenInfo(
+            type=tokenize.STRING,
+            string=self.content,
+            start=(1, 0),
+            end=(2, 0),
+            line=self.content,
+        )
+        handler = HANDLERS[token.type]
+        yield from handler(token, self.words)

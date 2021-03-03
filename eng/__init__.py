@@ -1,3 +1,3 @@
-from ._fixer import Target, Fixer
+from ._fixer import Target, PythonFixer
 
-__all__ = ['Fixer', 'Target']
+__all__ = ['PythonFixer', 'Target']
