@@ -44,11 +44,6 @@ class Fixer:
         callback = (line + b'\n' for line in lines).__next__
         return tuple(tokenize.tokenize(callback))
 
-    @classmethod
-    def from_path(cls, path: Path, **kwargs) -> 'Fixer':
-        content = path.read_text(encoding='utf8')
-        return cls(content=content, **kwargs)
-
     @property
     def words(self) -> typing.Mapping[str, str]:
         return get_words(target=self.target)
