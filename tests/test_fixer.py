@@ -12,6 +12,7 @@ from eng import Fixer
     ('".center?"', '".center?"'),
     ('"this is the centre"', '"this is the center"'),
     ('"this is the centre of the world"', '"this is the center of the world"'),
+    ('"batch normalisation block."', '"batch normalization block."'),
     ('"centre of the world"', '"center of the world"'),
 
     # triple quotes

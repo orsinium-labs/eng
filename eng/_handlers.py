@@ -26,6 +26,9 @@ def handle_str(
     words: typing.Mapping[str, str],
 ) -> typing.Iterator[Replacement]:
     for row_offset, line in enumerate(token.string.split('\n')):
+        col_offset = 0
+        if not row_offset:
+            col_offset = token.start[1]
         for match in REX_WORD.finditer(line):
             old_word = match.group(0)
             new_word = words.get(old_word)
@@ -35,7 +38,7 @@ def handle_str(
                 new_word = new_word.title()
             yield Replacement(
                 row=token.start[0] - 1 + row_offset,
-                col=token.start[1] + match.start(),
+                col=match.start() + col_offset,
                 word_from=old_word,
                 word_to=new_word,
             )
