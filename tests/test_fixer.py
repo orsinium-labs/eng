@@ -42,6 +42,7 @@ def test_TextFixer(given: str, expected: str):
 @pytest.mark.parametrize('given, expected', [
     ('this is the centre of the world', 'this is the centre of the world'),
     ('this is the "centre" of the world', 'this is the "center" of the world'),
+    (r'this "is \" centre" world', r'this "is \" center" world'),
 ])
 def test_LiteralFixer(given: str, expected: str):
     fixer = LiteralFixer(content=given)
