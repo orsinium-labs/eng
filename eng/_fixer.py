@@ -6,7 +6,6 @@ from pathlib import Path
 from types import MappingProxyType
 
 from ._replacement import Replacement
-from ._handlers import HANDLERS
 
 
 class Target(enum.Enum):
@@ -68,10 +67,7 @@ class PythonFixer(Fixer):
     @property
     def replacements(self) -> typing.Iterator[Replacement]:
         for token in self.tokens:
-            handler = HANDLERS.get(token.type)
-            if handler is None:
-                continue
-            yield from handler(token, self.words)
+            yield from Replacement.from_token(token, self.words)
 
 
 class TextFixer(Fixer):
@@ -84,5 +80,4 @@ class TextFixer(Fixer):
             end=(2, 0),
             line=self.content,
         )
-        handler = HANDLERS[token.type]
-        yield from handler(token, self.words)
+        yield from Replacement.from_token(token, self.words)
