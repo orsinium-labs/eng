@@ -1,4 +1,5 @@
 import enum
+import re
 import tokenize
 import typing
 from functools import lru_cache
@@ -6,6 +7,9 @@ from pathlib import Path
 from types import MappingProxyType
 
 from ._replacement import Replacement
+
+
+REX_STRING = re.compile(r'\"[^"\\]*(?:\\.[^"\\]*)*"')
 
 
 class Target(enum.Enum):
@@ -67,6 +71,8 @@ class PythonFixer(Fixer):
     @property
     def replacements(self) -> typing.Iterator[Replacement]:
         for token in self.tokens:
+            if token.type not in {tokenize.STRING, tokenize.COMMENT}:
+                continue
             yield from Replacement.from_token(token, self.words)
 
 
@@ -81,3 +87,18 @@ class TextFixer(Fixer):
             line=self.content,
         )
         yield from Replacement.from_token(token, self.words)
+
+
+class LiteralFixer(Fixer):
+    @property
+    def replacements(self) -> typing.Iterator[Replacement]:
+        for row_offset, line in enumerate(self.content.split('\n')):
+            for match in REX_STRING.finditer(line):
+                token = tokenize.TokenInfo(
+                    type=tokenize.STRING,
+                    string=match.group(0),
+                    start=(1+row_offset, match.start()),
+                    end=(2+row_offset, 0),
+                    line=self.content,
+                )
+                yield from Replacement.from_token(token, self.words)

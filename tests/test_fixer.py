@@ -1,12 +1,14 @@
 import pytest
 
-from eng import PythonFixer
+from eng import PythonFixer, TextFixer, LiteralFixer
 
 
 @pytest.mark.parametrize('given, expected', [
     # string literal
     ('"centre"', '"center"'),
     ("'centre'", "'center'"),
+    ('"centre centre"', '"center center"'),
+    ('centre = "centre"', 'centre = "center"'),
     ('"center"', '"center"'),
     ('"center,"', '"center,"'),
     ('".center?"', '".center?"'),
@@ -26,4 +28,21 @@ from eng import PythonFixer
 ])
 def test_PythonFixer(given: str, expected: str):
     fixer = PythonFixer(content=given)
+    assert fixer.apply() == expected
+
+
+@pytest.mark.parametrize('given, expected', [
+    ('this is the centre of the world', 'this is the center of the world'),
+])
+def test_TextFixer(given: str, expected: str):
+    fixer = TextFixer(content=given)
+    assert fixer.apply() == expected
+
+
+@pytest.mark.parametrize('given, expected', [
+    ('this is the centre of the world', 'this is the centre of the world'),
+    ('this is the "centre" of the world', 'this is the "center" of the world'),
+])
+def test_LiteralFixer(given: str, expected: str):
+    fixer = LiteralFixer(content=given)
     assert fixer.apply() == expected

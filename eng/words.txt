@@ -690,10 +690,6 @@ gaolers	jailers
 gaoling	jailing
 gaols	jails
 gases	gasses
-gauge	gage
-gauged	gaged
-gauges	gages
-gauging	gaging
 generalisation	generalization
 generalisations	generalizations
 generalise	generalize
