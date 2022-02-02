@@ -24,7 +24,7 @@ class Replacement(typing.NamedTuple):
                 col_offset = token.start[1]
             for match in REX_WORD.finditer(line):
                 old_word = match.group(0)
-                new_word = words.get(old_word)
+                new_word = words.get(old_word.lower())
                 if new_word is None:
                     continue
                 if old_word.istitle():
