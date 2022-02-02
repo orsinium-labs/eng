@@ -1529,6 +1529,8 @@ signalising	signalizing
 signalled	signaled
 signalling	signaling
 simultaneous	simultanous
+skilful	skillful
+skilfully	skillfully
 sleigh	sled
 smoulder	smolder
 smouldered	smoldered
@@ -1852,6 +1854,8 @@ westernise	westernize
 westernised	westernized
 westernises	westernizes
 westernising	westernizing
+wilful	willful
+wilfully	willfully
 windscreen	windshield
 womanise	womanize
 womanised	womanized
