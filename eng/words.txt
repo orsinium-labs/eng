@@ -1029,10 +1029,10 @@ mesmerising	mesmerizing
 metabolise	metabolize
 metabolised	metabolized
 metabolises	metabolizes
-metabolising	metabolizing
-metre	 meter
-metres	 meters
-micrometre	micrometer
+metabolising  metabolizing
+metre  meter
+metres  meters
+micrometre  micrometer
 micrometres	micrometers
 militarise	militarize
 militarised	militarized
