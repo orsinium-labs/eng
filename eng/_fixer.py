@@ -26,6 +26,8 @@ def get_words(target: Target) -> typing.Mapping[str, str]:
         if not line:
             continue
         uk, us = line.split('\t')
+        uk = uk.strip()
+        us = us.strip()
         if target == Target.US:
             result[uk] = us
         else:
@@ -97,8 +99,8 @@ class LiteralFixer(Fixer):
                 token = tokenize.TokenInfo(
                     type=tokenize.STRING,
                     string=match.group(0),
-                    start=(1+row_offset, match.start()),
-                    end=(2+row_offset, 0),
+                    start=(1 + row_offset, match.start()),
+                    end=(2 + row_offset, 0),
                     line=self.content,
                 )
                 yield from Replacement.from_token(token, self.words)
