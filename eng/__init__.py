@@ -2,7 +2,7 @@
 """
 from ._fixer import Target, PythonFixer, TextFixer, LiteralFixer, Fixer
 
-__version__ = '0.1.1'
+__version__ = '0.1.2'
 __all__ = [
     'Fixer',
     'PythonFixer',
